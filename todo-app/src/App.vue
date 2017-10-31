@@ -1,8 +1,7 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <todo-list v-bind:todos="todos"></todo-list>
-
+  <div id='app'>
+    <img src='./assets/logo.png'>
+    <todo-list v-bind:todos='todos'></todo-list>
   </div>
 </template>
 
@@ -31,7 +30,7 @@ export default {
       }, {
         title: 'Todo D',
         project: 'Project D',
-        done: false,
+        done: true,
       }],
     };
   },
