@@ -50,6 +50,14 @@
         isEditing: false,
       };
     },
+    created: () => {
+    },
+    mounted: () => {
+    },
+    updated: () => {
+    },
+    destroyed: () => {
+    },
     methods: {
       deleteTodo(todo) {
         this.$emit('delete-todo', todo);
