@@ -36,7 +36,7 @@
     <div class='ui bottom attached green basic button' v-show='!isEditing && todo.done'>
       Completed
     </div>
-    <div class='ui bottom attached red basic button' v-show='!isEditing && !todo.done'>
+    <div class='ui bottom attached red basic button' v-show='!isEditing && !todo.done' v-on:click='completeTodo(todo)'>
       Pending
     </div>
   </div>
@@ -59,6 +59,9 @@
     destroyed: () => {
     },
     methods: {
+      completeTodo(todo) {
+        this.$emit('complete-todo', todo);
+      },
       deleteTodo(todo) {
         this.$emit('delete-todo', todo);
       },
